@@ -59,7 +59,7 @@ def index(request):
                         </div>
                         <div class="col-md-6">
                             <span class="badge badge-default">Label</span>
-                            <img src="/SiteAnaliseAcoes/static/img/Grafico.png" alt="Girl in a jacket" width="500" height="600">
+                            <img src="static/img/Grafico.png" alt="Girl in a jacket" width="500" height="600">
                         </div>
                     </div>
                 </div>
