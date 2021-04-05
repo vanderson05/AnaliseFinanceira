@@ -1,0 +1,1 @@
+web: gunicorn AnaliseFinanceira.wsgi
