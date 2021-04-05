@@ -8,5 +8,6 @@ pytz==2019.3
 sqlparse==0.4.1
 whitenoise==5.0.1
 yfinance==0.1.55
+pandas-datareader
 
 
