@@ -9,6 +9,7 @@ sqlparse==0.4.1
 whitenoise==5.0.1
 yfinance==0.1.55
 pandas-datareader
+pandas
 plotly
 
 
