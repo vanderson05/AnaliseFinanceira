@@ -4,7 +4,7 @@ from datetime import datetime, time
 from django.contrib.admin.widgets import AdminDateWidget
 
 class AtivoForm(forms.Form):
-    ativo = forms.CharField(label='AÇÃO: ',  max_length=240)
+    ativo = forms.CharField(label='CONSULTE UM ATIVO',  max_length=240)
     #date = forms.DateField(label='Periodo: ', widget = forms.SelectDateWidget())
     #date = forms.DateField(label='PERIODO')
     

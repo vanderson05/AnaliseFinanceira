@@ -20,12 +20,12 @@
     cursor: pointer;
 }
 
-h1{
+.mystyle h1{
     font-style: arial;
     background-color:cornflowerblue;
 }
 
-h3{
+.mystyle h3{
     font-style: arial;
     background-color:cornflowerblue;
 }
@@ -39,7 +39,12 @@ button{
 
 label{
     
-    font-style: italic;
-    font-size: medium;
+    font-style: arial;
+    font-weight: bold;
     color:mediumblue;
+    text-decoration: underline;
+}
+p{
+    color: white;
+    font-weight: bold;
 }

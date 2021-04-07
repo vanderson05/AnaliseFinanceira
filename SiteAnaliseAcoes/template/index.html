@@ -1,25 +1,57 @@
 {% extends "base.html" %}
-
 <title>HOME</title>
-
 {% block content %}
-
 <body>
-
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right"><a class="active" href="#about">About</a></li>
+   <!--
+      <div class="container-fluid">
+      -->
+   <nav>
+      <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">News</a></li>
+         <li><a href="#">contact</a></li>
+         <li style="float:right"><a class="active" href="#about">About</a></li>
+         <form class="form-inline" method="POST" style="text-align: center; padding: 14px 16px; left: 400;">
+            {% csrf_token %}
+            {{form}}   
+            <input type = "submit" value = "Pesquisar">
+         </form>
       </ul>
-      
-    <h3>Realizar Consulta</h3>
-    </b>
-    <form method="POST">
-        {% csrf_token %}
-        {{form}}   
-        <input type = "submit" value = "Pesquisar">
-    </form>
+   </nav>
+   <main>
+      <div class="bs-docs-header" id="content"  style="background-color:lightgrey; margin-right: 0%; margin-left: 0%;">
+         <!--
+            <div class="bs-docs-header" id="content"  style="background-color:#6f5499; margin-right: -1%; margin-left: -1%;">
+            	-->
+         <div class="container">
+            <dl>
+            <dt style="color: rgb(8, 88, 14); text-decoration: underline;">
+               Analise de Ações
+            </dt>
+            <dd>
+               <p style="color:black;">Realizamos analise com algoritimos de inteligencia artificial</p>
+            </dd>
+            <dt style="color: rgb(8, 88, 14); text-decoration: underline;">
+               Description lists
+            </dt>
+            <dd>
+               <p style="color:black;">Todos os profissionais de marketing usam essa ferramenta</p>
+            </dd>
+            <dt style="color: rgb(8, 88, 14); text-decoration: underline;">
+               Description lists
+            </dt>
+            <dd>
+               <p style="color:black;">Eu ganhei 3 horas do meu dia com uma simples mudança..</p>
+            </dd>
+            <img src="static/img/ML2.png" class="img-fluid" alt="Girl in a jacket" style="margin-left: 38%; margin-top: -11%; margin-bottom: 5%;" width="70%">
+         </div>
+      </div>
+   </main>
+   <footer>
+      <p>@Copyright 2050 by nobody. All rights reserved</p>
+   </footer>
+   <!--
+      </div>
+      -->
 </body>
-
 {% endblock content %}
