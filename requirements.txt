@@ -11,5 +11,5 @@ yfinance==0.1.55
 pandas-datareader
 pandas
 plotly
-
+numpy
 

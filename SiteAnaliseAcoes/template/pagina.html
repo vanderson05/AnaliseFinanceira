@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+<title>PAGINA</title> {% block content %} {% load static %}
+<link rel="stylesheet" href="static/pagina.css">
+
+<body>
+	<div>
+		<br>
+		<input type="button" value="Voltar" onClick="history.go(-1)"><b>                                
+    </button style="margin-right: -10%">  
+    <div class ="tab">
+        <input type="radio" name="tabs" id="tab1" checked>
+        <label for="tab1">Grafico</label>
+        <input type="radio" name="tabs" id="tab2" checked>
+        <label for="tab2">Dados Historico</label>
+            <div class ="tabs">
+                <div id="myDiv" class="content" style="background-color:white">               
+                   <h1 style="text-align: center;">Grafico Historico</h1>
+                    
+                      {% autoescape off %}
+                      {{ plot_div }}
+                      {% endautoescape %}
+                   
+                </div>
+                <div class="content">
+                    <table border="1" class="dataframe mystyle" id="tabela" cellpadding="5" cellspacing="5">
+                        <thead>
+                            <tr style="background-color: red;">
+                                <th>Data</th>
+                                <th>Abertura</th>
+                                <th>Fechamento</th>
+                                <th>Alta</th>
+                                <th>Baixa</th>
+                                <th>Fec Ajustado</th>
+                                <th>Volume</th>
+                                
+                            </tr>
+                        </thead>
+                        
+                            <tbody>
+                                {% if d %}
+                                {% for i in d %}
+                                <tr style="word-wrap:break-word">   
+                                    <td>{{i.Date}}</td> 
+                                    <td>{{i.Open}}</td>
+                                    <td>{{i.Close}}</td>
+                                    <td>{{i.High}}</td>
+                                    <td>{{i.Low}}</td>
+                                    <td>{{i.Adj }}</td>
+                                    <td>{{i.Volume}}</td>
+                                    
+                                    
+                                </tr>
+                                
+                                {% endfor %}
+                                {% endif %}
+                        </tbody>                     
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+
+{% endblock content %}
