@@ -22,7 +22,7 @@ urlpatterns = [
    
     path('', include('SiteAnaliseAcoes.urls')),
     path('', views.index, name='index'),
-    path('pagina/', views.analise, name='analise') 
+    path('pagina/', views.pagina, name='pagina') 
     
    # path('',views.index),
    # path('index/analise/',views.analise),

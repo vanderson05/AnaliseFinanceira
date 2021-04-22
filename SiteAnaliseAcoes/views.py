@@ -67,6 +67,6 @@ def index(request):
     return render(request,'index.html', context)
 
  
-#def analise(request):
+def pagina(request):
     #return HttpResponse("Hello, world. You're at the polls index.")
-   # return render(request,'analise.html')
+    return render(request,'pagina.html')

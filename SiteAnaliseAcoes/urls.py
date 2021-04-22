@@ -11,6 +11,6 @@ urlpatterns = [
  #   path("analise/",views.analise, name='analise'),
 #]
 urlpatterns = [
-    path("pagina/",views.analise, name='analise'),
+    path("pagina/",views.pagina, name='pagina'),
 ]
 
